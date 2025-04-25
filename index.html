@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Buenavista - Cafetería y Zona Deportiva en Mazarrón</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#8B4513',
+secondary:'#6B8E23'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=A%20beautiful%20outdoor%20cafe%20terrace%20with%20padel%20courts%20and%20a%20small%20football%20field%20visible%20in%20the%20background.%20The%20cafe%20has%20wooden%20tables%20with%20comfortable%20chairs%2C%20surrounded%20by%20green%20plants%20and%20trees.%20The%20atmosphere%20is%20warm%20and%20inviting%2C%20with%20soft%20natural%20lighting.%20The%20scene%20shows%20families%20enjoying%20drinks%20and%20food%20in%20a%20relaxed%20Mediterranean%20setting.&width=1920&height=1080&seq=cafe-hero&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+input:focus, textarea:focus {
+outline: none;
+}
+.custom-checkbox {
+display: inline-block;
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+background-color: #f0f0f0;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #8B4513;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 7px;
+top: 3px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-[#FFFAF5]">
+<!-- Navegación -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Café Buenavista</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#" class="font-medium text-gray-800 hover:text-primary transition">Inicio</a>
+<a href="#carta" class="font-medium text-gray-800 hover:text-primary transition">Carta</a>
+<a href="#instalaciones" class="font-medium text-gray-800 hover:text-primary transition">Instalaciones</a>
+<a href="#contacto" class="font-medium text-gray-800 hover:text-primary transition">Contacto</a>
+</nav>
+<a href="#contacto" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Contáctanos</a>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full min-h-[600px] flex items-center" style="background-image: url('https://static.readdy.ai/image/713089e8dbe71e2f7539593c779b0dde/2886ce35ca3fdd37eadd0b0e2befabe3.jpeg'); background-size: cover; background-position: center;">
+<div class="container mx-auto px-4 py-20">
+<div class="max-w-2xl bg-white bg-opacity-90 p-8 rounded-lg">
+<h1 class="text-5xl font-bold text-gray-900 mb-4">Café Buenavista</h1>
+<p class="text-xl text-gray-800 mb-8">Más que una cafetería, un espacio para toda la familia</p>
+<div class="flex flex-wrap gap-4">
+<a href="#carta" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Ver Carta</a>
+<a href="#contacto" class="bg-white border border-primary text-primary px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap">Contactar</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Traditional%20Spanish%20ensaladilla%20rusa%20served%20in%20a%20white%20ceramic%20plate%2C%20garnished%20with%20olives%20and%20red%20peppers.%20The%20potato%20salad%20is%20creamy%20and%20perfectly%20mixed%20with%20vegetables%2C%20presented%20in%20an%20appetizing%20way%20on%20a%20rustic%20wooden%20table%20with%20Spanish%20restaurant%20setting.&width=400&height=300&seq=ensaladilla&orientation=landscape" alt="Ensaladilla Rusa" class="w-full h-64 object-cover object-top">
+<div class="p-4">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Ensaladilla Rusa</h3>
+<p class="text-gray-600">Nuestra tradicional ensaladilla con mayonesa casera</p>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Traditional%20Murcian%20marinera%20tapa%20-%20a%20crusty%20bread%20topped%20with%20Russian%20potato%20salad%20and%20an%20anchovy%2C%20garnished%20with%20olives.%20The%20presentation%20is%20elegant%20and%20typical%20of%20Spanish%20tapas%2C%20served%20on%20a%20traditional%20ceramic%20plate%20in%20a%20restaurant%20setting.&width=400&height=300&seq=marinera&orientation=landscape" alt="Marinera Murciana" class="w-full h-64 object-cover object-top">
+<div class="p-4">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Marinera Murciana</h3>
+<p class="text-gray-600">La auténtica marinera murciana con anchoa del Cantábrico</p>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Classic%20Spanish%20tortilla%20de%20patatas%20served%20on%20a%20rustic%20plate%2C%20perfectly%20cooked%20with%20golden%20exterior%20and%20juicy%20interior.%20Accompanied%20by%20fresh%20bread%20and%20olives.%20The%20setting%20is%20a%20traditional%20Spanish%20tapas%20bar%20with%20warm%20lighting.&width=400&height=300&seq=tortilla&orientation=landscape" alt="Tortilla de Patatas" class="w-full h-64 object-cover object-top">
+<div class="p-4">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Tortilla de Patatas</h3>
+<p class="text-gray-600">Tortilla casera jugosa con cebolla caramelizada</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sobre Nosotros -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Sobre Nosotros</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=A%20cozy%20cafe%20interior%20with%20wooden%20tables%20and%20comfortable%20chairs.%20The%20space%20has%20warm%20lighting%2C%20plants%2C%20and%20decorative%20elements%20that%20create%20a%20welcoming%20atmosphere.%20Large%20windows%20allow%20natural%20light%20to%20flood%20in%2C%20showing%20glimpses%20of%20outdoor%20sports%20facilities.%20The%20cafe%20has%20a%20rustic%20yet%20modern%20design%20with%20a%20warm%20color%20palette%20of%20browns%20and%20greens.&width=600&height=400&seq=cafe-interior&orientation=landscape" alt="Interior de Café Buenavista" class="w-full h-auto rounded-lg shadow-lg object-cover object-top">
+</div>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Un lugar para disfrutar en familia</h3>
+<p class="text-gray-700 mb-6">En Café Buenavista creemos que los mejores momentos son aquellos que compartimos con nuestros seres queridos. Por eso, hemos creado un espacio único donde los adultos pueden disfrutar de un buen café y deliciosas tapas mientras los más pequeños se divierten en nuestras instalaciones deportivas.</p>
+<p class="text-gray-700 mb-6">Ubicados en Mazarrón, contamos con una acogedora cafetería, pistas de pádel profesionales y un área de fútbol para niños, todo en un mismo lugar. Nuestra filosofía es simple: ofrecer un ambiente familiar donde todos puedan disfrutar.</p>
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+<i class="ri-cup-line text-primary"></i>
+</div>
+<span class="font-medium">Café de especialidad</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+<i class="ri-restaurant-line text-primary"></i>
+</div>
+<span class="font-medium">Tapas caseras</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+<i class="ri-gamepad-line text-primary"></i>
+</div>
+<span class="font-medium">Zona infantil</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instalaciones -->
+<section id="instalaciones" class="py-20 bg-[#F9F5F0]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestras Instalaciones</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-700 max-w-2xl mx-auto">Disfruta de nuestras modernas instalaciones diseñadas para toda la familia. Desde nuestra acogedora cafetería hasta nuestras pistas deportivas, todo está pensado para tu comodidad.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+<img src="https://readdy.ai/api/search-image?query=A%20modern%20game%20room%20with%20professional%20dart%20boards%20mounted%20on%20walls%2C%20pool%20tables%20with%20green%20felt%20tops%2C%20and%20ambient%20lighting.%20The%20space%20has%20a%20sophisticated%20yet%20casual%20atmosphere%20with%20comfortable%20seating%20areas%20and%20wood%20accents.%20The%20room%20is%20well-lit%20with%20modern%20fixtures%20and%20has%20a%20welcoming%20ambiance%20perfect%20for%20social%20gatherings%20and%20recreational%20activities.&width=400&height=300&seq=game-room&orientation=landscape" alt="Zona Recreativa" class="w-full h-64 object-cover object-top">
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Zona Recreativa</h3>
+<p class="text-gray-700 mb-4">Disfruta de nuestro espacio de ocio con billar profesional, diana electrónica de dardos y otros juegos recreativos. Un lugar perfecto para compartir momentos divertidos con amigos y familia.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Billar</span>
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Dardos</span>
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Juegos de mesa</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+<img src="https://readdy.ai/api/search-image?query=Professional%20padel%20tennis%20courts%20with%20high-quality%20artificial%20grass%20and%20glass%20walls.%20The%20courts%20are%20well-maintained%20with%20proper%20lighting%20for%20evening%20play.%20The%20setting%20shows%20a%20clean%2C%20modern%20sports%20facility%20with%20some%20spectator%20seating%20around%20the%20courts.%20The%20scene%20is%20bright%20and%20inviting%20for%20sports%20enthusiasts.&width=400&height=300&seq=padel-courts&orientation=landscape" alt="Pistas de Pádel" class="w-full h-64 object-cover object-top">
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Pistas de Pádel</h3>
+<p class="text-gray-700 mb-4">Disfruta del deporte de moda en nuestras pistas profesionales. Perfectas tanto para principiantes como para jugadores experimentados. Ofrecemos alquiler de material y clases particulares.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">2 Pistas</span>
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Iluminación</span>
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Alquiler material</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+<img src="https://readdy.ai/api/search-image?query=A%20small%2C%20safe%20football%20field%20designed%20for%20children%2C%20with%20artificial%20grass%20and%20colorful%20markings.%20The%20area%20is%20enclosed%20with%20low%20fencing%20for%20safety.%20There%20are%20small%20goals%20at%20each%20end%2C%20and%20the%20space%20is%20bright%20and%20inviting.%20Some%20children%20are%20playing%20while%20parents%20watch%20from%20nearby%20seating%20areas.%20The%20atmosphere%20is%20fun%20and%20family-friendly.&width=400&height=300&seq=kids-football&orientation=landscape" alt="Área de Fútbol Infantil" class="w-full h-64 object-cover object-top">
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Área de Fútbol Infantil</h3>
+<p class="text-gray-700 mb-4">Un espacio seguro donde los más pequeños pueden divertirse jugando al fútbol mientras los adultos disfrutan de la cafetería. Superficie de césped artificial y equipamiento adaptado para niños.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Césped artificial</span>
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Zona vallada</span>
+<span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Supervisión</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Carta -->
+<section id="carta" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestra Carta</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-700 max-w-2xl mx-auto">Disfruta de nuestra selección de bebidas, tapas y platos elaborados con ingredientes frescos y de primera calidad. También contamos con opciones para los más pequeños.</p>
+</div>
+<div class="flex flex-wrap justify-center mb-10">
+<div class="inline-flex bg-gray-100 p-1 rounded-full">
+<button class="px-6 py-2 rounded-full bg-primary text-white whitespace-nowrap">Bebidas</button>
+<button class="px-6 py-2 rounded-full text-gray-700 whitespace-nowrap">Tapas</button>
+<button class="px-6 py-2 rounded-full text-gray-700 whitespace-nowrap">Platos</button>
+<button class="px-6 py-2 rounded-full text-gray-700 whitespace-nowrap">Menú Infantil</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+<img src="https://readdy.ai/api/search-image?query=A%20perfectly%20prepared%20Spanish%20cafe%20con%20leche%20in%20a%20white%20ceramic%20cup%20on%20a%20saucer.%20The%20coffee%20has%20a%20rich%20brown%20color%20with%20a%20beautiful%20layer%20of%20creamy%20milk%20foam%20on%20top.%20The%20presentation%20is%20elegant%20and%20appetizing%2C%20with%20the%20cup%20placed%20on%20a%20wooden%20table%20surface.&width=100&height=100&seq=cafe-con-leche&orientation=squarish" alt="Café con Leche" class="w-20 h-20 rounded-lg object-cover object-top">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-semibold text-gray-800">Café con Leche</h3>
+<span class="font-medium text-primary">2,20€</span>
+</div>
+<p class="text-gray-600 text-sm">Espresso con leche caliente cremosa</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+<img src="https://readdy.ai/api/search-image?query=A%20refreshing%20glass%20of%20freshly%20squeezed%20orange%20juice.%20The%20juice%20is%20bright%20orange%20in%20color%20and%20served%20in%20a%20clear%20glass%20that%20shows%20its%20vibrant%20color.%20There%20are%20orange%20slices%20as%20garnish%20and%20perhaps%20some%20fresh%20oranges%20nearby.%20The%20presentation%20is%20fresh%20and%20appetizing.&width=100&height=100&seq=orange-juice&orientation=squarish" alt="Zumo de Naranja Natural" class="w-20 h-20 rounded-lg object-cover object-top">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-semibold text-gray-800">Zumo de Naranja Natural</h3>
+<span class="font-medium text-primary">3,50€</span>
+</div>
+<p class="text-gray-600 text-sm">Exprimido al momento</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+<img src="https://readdy.ai/api/search-image?query=A%20classic%20Spanish%20cortado%20coffee%20served%20in%20a%20small%20glass.%20The%20coffee%20is%20dark%20with%20a%20small%20layer%20of%20milk%20on%20top.%20The%20presentation%20is%20simple%20and%20elegant%2C%20typical%20of%20Spanish%20coffee%20culture.%20The%20glass%20sits%20on%20a%20small%20plate%20or%20saucer.&width=100&height=100&seq=cortado&orientation=squarish" alt="Cortado" class="w-20 h-20 rounded-lg object-cover object-top">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-semibold text-gray-800">Cortado</h3>
+<span class="font-medium text-primary">1,80€</span>
+</div>
+<p class="text-gray-600 text-sm">Espresso con una pequeña cantidad de leche</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+<img src="https://readdy.ai/api/search-image?query=A%20refreshing%20glass%20of%20homemade%20lemonade%20with%20fresh%20lemon%20slices%20and%20mint%20leaves.%20The%20drink%20is%20served%20in%20a%20clear%20glass%20with%20ice%20cubes%2C%20showing%20its%20pale%20yellow%20color.%20The%20presentation%20is%20fresh%20and%20summery%2C%20perfect%20for%20a%20hot%20day.&width=100&height=100&seq=lemonade&orientation=squarish" alt="Limonada Casera" class="w-20 h-20 rounded-lg object-cover object-top">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-semibold text-gray-800">Limonada Casera</h3>
+<span class="font-medium text-primary">3,20€</span>
+</div>
+<p class="text-gray-600 text-sm">Con limones de la región y menta fresca</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+<img src="https://readdy.ai/api/search-image?query=A%20classic%20Spanish%20carajillo%20coffee%20-%20espresso%20with%20a%20shot%20of%20brandy%20or%20liqueur.%20The%20coffee%20is%20served%20in%20a%20small%20glass%20that%20shows%20the%20layers%20of%20coffee%20and%20alcohol.%20The%20presentation%20is%20elegant%20and%20sophisticated%2C%20typical%20of%20Spanish%20coffee%20culture.&width=100&height=100&seq=carajillo&orientation=squarish" alt="Carajillo" class="w-20 h-20 rounded-lg object-cover object-top">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-semibold text-gray-800">Carajillo</h3>
+<span class="font-medium text-primary">2,80€</span>
+</div>
+<p class="text-gray-600 text-sm">Café espresso con brandy o licor 43</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+<img src="https://readdy.ai/api/search-image?query=A%20traditional%20Spanish%20horchata%20served%20in%20a%20clear%20glass.%20The%20drink%20is%20white%20and%20creamy%2C%20made%20from%20tiger%20nuts.%20It%20might%20be%20garnished%20with%20a%20sprinkle%20of%20cinnamon%20on%20top.%20The%20presentation%20is%20refreshing%20and%20traditional%2C%20perfect%20for%20a%20hot%20day.&width=100&height=100&seq=horchata&orientation=squarish" alt="Horchata" class="w-20 h-20 rounded-lg object-cover object-top">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-semibold text-gray-800">Horchata</h3>
+<span class="font-medium text-primary">3,00€</span>
+</div>
+<p class="text-gray-600 text-sm">Bebida tradicional refrescante de chufa</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+Ver carta completa
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Contacto -->
+<section id="contacto" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Contacto</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-700 max-w-2xl mx-auto">¿Tienes alguna pregunta? Estamos aquí para ayudarte. Puedes contactarnos por teléfono, email o visitarnos directamente en nuestras instalaciones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-[#F9F5F0] p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-map-pin-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Dirección</h3>
+<p class="text-gray-700">Av. Cabo de Palos, 1<br>30868 Mazarrón, Murcia</p>
+</div>
+<div class="bg-[#F9F5F0] p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-phone-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Teléfono</h3>
+<p class="text-gray-700">968 123 456</p>
+<p class="text-gray-700 mt-1">637 789 123</p>
+</div>
+<div class="bg-[#F9F5F0] p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-time-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Horario</h3>
+<p class="text-gray-700">Lunes a Viernes: 8:00 - 22:00</p>
+<p class="text-gray-700 mt-1">Sábados y Domingos: 9:00 - 23:00</p>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden shadow-lg">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.032528154004!2d-1.245861623593819!3d37.57785172347844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd64a0e520c5cad7%3A0xf102b79e2127e5d7!2sCaf%C3%A9%20Buenavista%20Club%20Social!5e0!3m2!1ses!2ses!4v1745609071112!5m2!1ses!2ses"
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 block">Café Buenavista</a>
+<p class="text-gray-400 mb-4">Más que una cafetería, un espacio para toda la familia en el corazón de Mazarrón.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-whatsapp-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+<li><a href="#carta" class="text-gray-400 hover:text-white transition">Carta</a></li>
+<li><a href="#instalaciones" class="text-gray-400 hover:text-white transition">Instalaciones</a></li>
+<li><a href="#contacto" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Servicios</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Cafetería</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Pistas de Pádel</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Zona Infantil</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Eventos</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Clases de Pádel</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Contacto</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 flex items-center justify-center mt-1">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<span class="text-gray-400">Av. Cabo de Palos, 1, 30868 Mazarrón, Murcia</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<span class="text-gray-400">968 123 456</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<span class="text-gray-400">info@cafebuenavista.es</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Café Buenavista. Todos los derechos reservados.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-500 text-sm hover:text-white transition">Política de Privacidad</a>
+<a href="#" class="text-gray-500 text-sm hover:text-white transition">Términos y Condiciones</a>
+<a href="#" class="text-gray-500 text-sm hover:text-white transition">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Menú de navegación responsive
+const menuButton = document.querySelector('.ri-menu-line');
+if (menuButton) {
+menuButton.addEventListener('click', function() {
+// Aquí iría la lógica para mostrar/ocultar el menú móvil
+alert('Menú móvil - Funcionalidad pendiente de implementar');
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Cambio de pestañas en la sección de carta
+const tabButtons = document.querySelectorAll('.bg-gray-100.p-1.rounded-full button');
+if (tabButtons.length > 0) {
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Eliminar clase activa de todos los botones
+tabButtons.forEach(btn => {
+btn.classList.remove('bg-primary', 'text-white');
+btn.classList.add('text-gray-700');
+});
+// Añadir clase activa al botón clickeado
+this.classList.add('bg-primary', 'text-white');
+this.classList.remove('text-gray-700');
+// Aquí iría la lógica para cambiar el contenido mostrado
+// Por ahora solo mostramos un mensaje
+if (this.textContent !== 'Bebidas') {
+alert(`Has seleccionado la categoría: ${this.textContent} - Contenido pendiente de implementar`);
+}
+});
+});
+}
+});
+</script>
+</body>
+</html>
